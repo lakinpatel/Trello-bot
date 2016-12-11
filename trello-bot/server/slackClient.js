@@ -12,7 +12,7 @@ function handleOnAuthenticated(rtmStartData) {
 
 function handleOnMessage(message) {
 
-    if (message.text.toLowerCase().includes('trello-bot')) {
+    if (message.text.toLowerCase().includes('trellobot')) {
         
         nlp.ask(message.text, (err, res) => {
             if (err) {
@@ -24,15 +24,8 @@ function handleOnMessage(message) {
                 if (!res.intent || !res.intent[0] || !res.intent[0].value) {
                     throw new Error("Could not extract intent");
                 }
-                //var intent;
-                //if(message.text.indexOf("lists") != -1)
-                //    intent = require('./intents/' + res.intent[0].value + 'Intent');
-                //else if(message.text.indexOf("cards") != -1)
-                //    intent = require('./intents/' + res.intent[0].value + 'Intent');
-                //else if(message.text.indexOf("add") != -1)
-                    //intent = require('./intents/' + 'addIntent');
-                    const intent = require('./intents/' + res.intent[0].value + 'Intent');
-                    
+                
+                const intent = require('./intents/' + res.intent[0].value + 'Intent');    
 
                 intent.process(res, function (error, response) {
                     if (error) {

@@ -8,7 +8,7 @@ const server = http.createServer(service);
 const witToken = '573Z5CQL36KANPMZ32OKOSGOEOFFODXO'
 const witClient = require('../server/witClient')(witToken);
 
-const slackToken = 'xoxb-114152323796-QG6MKikmPWfaEvoxlP3iJ326';
+const slackToken = 'xoxb-114674660816-aSTdshqaoMQHi0gG2bX2t7us';
 const slackLogLevel = 'verbose';
 
 const rtm = slackClient.init(slackToken, slackLogLevel, witClient);
