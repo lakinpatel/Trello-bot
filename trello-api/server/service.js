@@ -39,5 +39,7 @@ service.get('/cards/:listid/:cardname', (req, res, next)=> {
         idList: listId
     };
     trello.post('/1/cards/', newCard, creationSuccess);
+    var data = "Card added successfully.";
+    res.json(data);
 });
 module.exports = service;
