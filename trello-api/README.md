@@ -1,2 +1,2 @@
-"# COMP306_FrankTime_Nov28" 
 # Trello-bot
+# Interacts between Slack and Trello APIs, performs actions based on Slack Messages provided.
